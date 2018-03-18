@@ -1,0 +1,80 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sat Apr 01 23:50:34 2017
+| Host         : DESKTOP-A18H75F running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file myDAC_TOP_control_sets_placed.rpt
+| Design       : myDAC_TOP
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    27 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             109 |           46 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              84 |           22 |
+| Yes          | No                    | No                     |             152 |           53 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             135 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------+----------------------------+------------------+----------------+
+|   Clock Signal   |        Enable Signal       |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++------------------+----------------------------+----------------------------+------------------+----------------+
+|  f1/HALF_CLOCK   |                            |                            |                1 |              1 |
+|  JA_OBUF_BUFG[3] |                            |                            |                1 |              2 |
+|  JA_OBUF_BUFG[3] | u1/shiftCounter[3]_i_2_n_1 | u1/shiftCounter[3]_i_1_n_1 |                1 |              4 |
+|  JA_OBUF_BUFG[3] | u1/temp2                   | u1/shiftCounter[3]_i_1_n_1 |                3 |              5 |
+|  FREQ_BUFG       | DATA_A155_out              |                            |                3 |              7 |
+|  FREQ_B_BUFG     | DATA_B132_out              |                            |                3 |              7 |
+|  CLK_IBUF_BUFG   | DISP0                      |                            |                3 |             12 |
+|  n_0_9837_BUFG   | DD/f1/MAX                  | DU/f1/MAX_reg[0]           |                3 |             12 |
+|  n_0_9837_BUFG   | DD/f2/E[0]                 | DD/f2/MIN_reg[0]_0[0]      |                5 |             12 |
+|  n_0_9837_BUFG   | DD/f2/MIN_B_reg[0][0]      | DD/f2/SR[0]                |                4 |             12 |
+|  n_0_9837_BUFG   | DU/f2/MAX_B                | DU/f2/MAX_B_reg[0]_0       |                3 |             12 |
+|  FREQ_BUFG       |                            |                            |                4 |             13 |
+|  FREQ_B_BUFG     |                            |                            |                4 |             13 |
+|  CLK_IBUF_BUFG   | DISP0                      | DISP[27]_i_1_n_1           |                7 |             14 |
+|  n_0_9837_BUFG   |                            | DR/f1/pressed              |                4 |             14 |
+|  n_0_9837_BUFG   |                            | DR/f1/pressed_B            |                4 |             14 |
+|  CLK_IBUF_BUFG   | TRACK[17]_i_1_n_1          |                            |                8 |             18 |
+|  CLK_IBUF_BUFG   | TRACK_B[17]_i_1_n_1        |                            |                8 |             18 |
+|  f3/CLK          |                            |                            |               15 |             24 |
+|  CLK_IBUF_BUFG   |                            | COUNT_B_reg[0]_i_1_n_3     |                7 |             28 |
+|  CLK_IBUF_BUFG   |                            | clear                      |                7 |             28 |
+|  JA_OBUF_BUFG[3] | u1/temp2                   |                            |               13 |             28 |
+|  FREQ_BUFG       | sinval[31]_i_2_n_1         | sinval[31]_i_1_n_1         |                9 |             32 |
+|  FREQ_B_BUFG     | sinval_reg_rep_i_1_n_1     | sinval_B[31]_i_1_n_1       |                9 |             32 |
+|  n_0_9837_BUFG   | DL/f1/E[0]                 |                            |                8 |             32 |
+|  n_0_9837_BUFG   | DL/f1/left_freq_reg[0][0]  |                            |                8 |             32 |
+|  CLK_IBUF_BUFG   |                            |                            |               21 |             56 |
++------------------+----------------------------+----------------------------+------------------+----------------+
+
+
